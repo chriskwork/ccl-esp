@@ -1,0 +1,251 @@
+// Common styles
+
+.page-padding {
+  margin: 5rem 0;
+}
+
+.page-content {
+  min-height: calc(100vh - 232px);
+}
+
+.page-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 240px;
+  background-position: center bottom;
+  background-attachment: fixed;
+  margin-bottom: 2rem;
+
+  &-title {
+    color: #fff;
+  }
+
+  &.zaragoza {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)),
+      url('./assets/images/pages/ccl-zaragoza.jpg');
+  }
+
+  &.toledo {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)),
+      url('./assets/images/pages/ccl-toledo.jpg');
+  }
+
+  &.segovia {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)),
+      url('./assets/images/pages/ccl-segovia.jpg');
+  }
+
+  &.salchicon {
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5)),
+      url('./assets/images/pages/ccl-salchicon.jpg');
+  }
+}
+
+// 테마단어 페이지 ######################################
+// Tema Voca Index Buttons Styles
+
+#tema-voca-list {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+}
+
+#tema-voca-list a {
+  color: var(--clr--main-light);
+
+  &:hover {
+    color: var(--clr--main-dark);
+  }
+}
+
+// tema table (inserted in individual page)
+.tema-table {
+  padding-top: 3rem;
+
+  td {
+    padding: 2px 0;
+  }
+}
+
+// tema list page buttons (tema index page)
+.btn-tema-voca {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 80px;
+  max-width: 160px;
+
+  border: 1px solid var(--clr--border);
+  padding: 10px 20px;
+  border-radius: 6px;
+  transition: var(--transition);
+
+  &:hover {
+    border-color: var(--clr--main-dark);
+    background-color: rgba(0, 0, 0, 0.04);
+  }
+}
+
+// individual tema words page (table)
+.tema-voca-words {
+  color: var(--clr--main-light);
+  width: 100%;
+  padding-top: 1rem;
+
+  tr:nth-child(even) {
+    background-color: var(--clr--table-bg);
+  }
+
+  td {
+    padding: 10px;
+  }
+}
+
+.btn-go-back-to-list {
+  display: inline-block;
+  font-size: 14px;
+  color: var(--clr--main-light);
+  margin-top: 2rem;
+  padding: 10px;
+  transition: var(--transition);
+  border: 1px solid var(--clr--border);
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    color: var(--clr--main-dark);
+    border-color: var(--clr--main-dark);
+  }
+}
+
+// 다운로드 페이지 ######################################
+// DOWNLOADS PAGE
+
+.dl-section:not(last-child) {
+  margin-bottom: 1rem;
+}
+
+#downloads {
+  h4 {
+    margin-bottom: 1rem;
+  }
+
+  ul li {
+    padding: 4px;
+    margin-left: 1rem;
+  }
+
+  a.dl-link:hover {
+    color: var(--clr--main-dark);
+    text-decoration: underline;
+  }
+}
+
+// 스페인어 문법 페이지 ######################################
+// GRAMMARS PAGE
+
+#grammars {
+  ol {
+    width: max-content;
+
+    li {
+      margin: 0 0 10px 1rem;
+      transition: var(--transition);
+
+      &:hover {
+        color: var(--clr--main-dark);
+      }
+    }
+  }
+
+  hr {
+    margin: 2rem 0;
+  }
+}
+
+// 문법, 전치사 개별 디테일 페이지
+// Grammars, Prepositions, individual page.
+
+.docu-container {
+  padding: 3rem 0;
+
+  // 전치사 개별 페이지
+  .docu-block {
+    line-height: 1.4;
+
+    .content-title {
+      margin-bottom: 6px;
+    }
+
+    .content-header {
+      margin-bottom: 14px;
+    }
+
+    .content-text {
+      font-size: 0.9rem;
+    }
+
+    .content-tip {
+      margin-top: 14px;
+      font-size: 0.8rem;
+      color: var(--clr--main-light);
+    }
+
+    .content-tip-header {
+      margin-bottom: 6px;
+    }
+  }
+
+  hr {
+    margin: 2rem 0;
+    width: 80%;
+    max-width: 800px;
+    min-width: 300px;
+  }
+
+  // 기초문법 시리즈 개별 페이지
+  .basic-gramm {
+    line-height: 1.6;
+
+    p {
+      margin-bottom: 2rem;
+    }
+
+    h3 {
+      color: var(--clr--main-light);
+    }
+
+    span {
+      display: block;
+      font-size: 0.9rem;
+    }
+
+    span.exception {
+      color: var(--clr--main-light);
+      margin-top: 6px;
+    }
+
+    span.grey-example {
+      background-color: var(--clr--bg-grey);
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    table {
+      width: 100%;
+      max-width: 600px;
+      border-collapse: collapse;
+      margin-bottom: 2rem;
+      table-layout: fixed;
+
+      th,
+      td {
+        border: 1px solid var(--clr--border);
+        padding: 4px 10px;
+      }
+    }
+  }
+}
